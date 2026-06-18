@@ -42,3 +42,34 @@ else:
             print("Одинаковых чисел:", 2)
         else:
             print("Нет одинаковых чисел")
+print()
+a, b, c = int(input()), int(input()), int(input())  # задача на треугольники
+if a + b > c and b + c > a and a + c > b:
+    if a == b == c:
+        print("Равносторонний")
+    elif a == b or a == c or b == c:
+        print("Равнобедренный")
+    else:
+        print("Разносторонний")
+else:
+    print("Такого треугольника не существует")
+print()
+a, b, c = (
+    int(input()),
+    int(input()),
+    str(input()),
+)  # простой калькулятор (плюс-минус, умножение-деление на 2 числа)
+if not (c != "/" and c != "*" and c != "-" and c != "+"):
+    if c == "+":
+        print(a + b)
+    elif c == "-":
+        print(a - b)
+    elif c == "*":
+        print(a * b)
+    elif c == "/":
+        if b != 0:
+            print(a / b)
+        else:
+            print("На ноль делить нельзя!")
+else:
+    print("Неверная операция")

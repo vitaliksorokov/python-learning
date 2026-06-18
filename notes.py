@@ -31,6 +31,7 @@ if max_ab < max_cd:
     max_abcd = max_cd
 else:
     max_abcd = max_ab
+
 if min_ab < min_cd:
     min_abcd = min_ab
 else:
@@ -79,6 +80,41 @@ x, y, x_1, y_1 = (
 if (x_1 == x + 1 or x_1 == x - 1 or x_1 == x) and (
     y_1 == y + 1 or y_1 == y - 1 or y_1 == y
 ):
+    print("YES")
+else:
+    print("NO")
+print()
+x, y, x_1, y_1 = (
+    int(input()),
+    int(input()),
+    int(input()),
+    int(input()),
+)  # задача на шахматы (гадкий слон)
+if (x + y == x_1 + y_1) or (x - y == x_1 - y_1):
+    print("YES")
+else:
+    print("NO")
+print()
+x, y, x_1, y_1 = (
+    int(input()),
+    int(input()),
+    int(input()),
+    int(input()),
+)  # задача на шахматы (нечестивый конь)
+if (abs(x - x_1) == 1 and abs(y - y_1) == 2) or (
+    abs(x - x_1) == 2 and abs(y - y_1) == 1
+):
+    print("YES")
+else:
+    print("NO")
+print()
+x, y, x_1, y_1 = (
+    int(input()),
+    int(input()),
+    int(input()),
+    int(input()),
+)  # задача на шахматы (ужасный ферзь)
+if (abs(x - x_1) == abs(y - y_1)) or (y == y_1) or (x == x_1):
     print("YES")
 else:
     print("NO")
@@ -164,7 +200,6 @@ if 0 <= a <= 36:
 else:
     print("ошибка ввода")
 print()
-a, b, c, d = int(input()), int(input()), int(input()), int(input())
 a, b, c, d = int(input()), int(input()), int(input()), int(input())
 if (a < b) and (c < d):  # пересечение отрезков
     if b == c:  # b == c

@@ -93,7 +93,7 @@ a, b, c, d, e = (
 )  # задача на сумму модулей 5 чисел
 print(abs(a) + abs(b) + abs(c) + abs(d) + abs(e))
 print()
-n = int(input())
+n = int(input())  # задача на интересные числа
 digit1 = n % 10
 digit2 = n // 10 % 10
 digit3 = n // 100 % 10
@@ -102,3 +102,12 @@ if digit1 == digit2 + digit3 or digit2 == digit1 + digit3 or digit3 == digit1 + 
     print("Число интересное")
 else:
     print("Число неинтересное")
+print()
+a, b, c = int(input()), int(input()), int(input())  # задача на сортировку 3 чисел
+MAX, MIN, MID = max(a, b, c), min(a, b, c), (a + b + c - max(a, b, c) - min(a, b, c))
+if a == b > c or a == c > b or b == c > a:
+    print(MAX, "\n", MAX, "\n", MIN, sep="")
+elif a == b < c or a == c < b or b == c < a:
+    print(MAX, "\n", MIN, "\n", MIN, sep="")
+else:
+    print(MAX, "\n", MID, "\n", MIN, sep="")
